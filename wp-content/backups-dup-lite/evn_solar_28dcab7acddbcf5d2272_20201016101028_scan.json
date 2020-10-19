@@ -1,0 +1,414 @@
+{
+    "RPT": {
+        "ScanTime": "0.03 sec.",
+        "ScanFile": "evn_solar_28dcab7acddbcf5d2272_20201016101028_scan.json",
+        "Warnings": 1,
+        "Success": 5
+    },
+    "SRV": {
+        "PHP": {
+            "websrv": true,
+            "openbase": false,
+            "maxtime": true,
+            "mysqli": true,
+            "version": true,
+            "ALL": "Warn"
+        },
+        "WP": {
+            "version": true,
+            "core": true,
+            "ismu": false,
+            "ALL": "Good"
+        }
+    },
+    "ARC": {
+        "Size": "0B",
+        "DirCount": "0",
+        "FileCount": "0",
+        "FullCount": "0",
+        "WarnFileCount": 0,
+        "WarnDirCount": 0,
+        "UnreadableDirCount": 0,
+        "UnreadableFileCount": 0,
+        "FilterDirsAll": [
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/.opcache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/ai1wm-backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backups-dup-lite",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backups-dup-pro",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backupwordpress",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/bps-backup",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/cache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/content\/cache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/contents\/cache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/infinitewp\/backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/managewp\/backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/old-cache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/plugins\/all-in-one-wp-migration\/storage",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/updraft",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/aiowps_backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/backupbuddy_backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/backupbuddy_temp",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/ithemes-security\/backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/mainwp\/backup",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/pb_backupbuddy",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/snapshots",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/sucuri",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wp-clone",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wp_all_backup",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wpbackitup_backups",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/wfcache",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/wishlist-backup",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-snapshots"
+        ],
+        "FilterFilesAll": [
+            "error_log",
+            "error.log",
+            "debug_log",
+            "ws_ftp.log",
+            "dbcache",
+            "pgcache",
+            "objectcache",
+            ".DS_Store",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/.htaccess",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/web.config",
+            "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-config.php"
+        ],
+        "FilterExtsAll": [],
+        "FilterInfo": {
+            "Dirs": {
+                "Warning": [],
+                "Unreadable": [],
+                "Core": [
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-snapshots",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backups-dup-lite",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/.opcache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backups-dup-pro",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/ai1wm-backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/backupwordpress",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/content\/cache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/contents\/cache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/infinitewp\/backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/managewp\/backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/old-cache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/plugins\/all-in-one-wp-migration\/storage",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/updraft",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/wishlist-backup",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/wfcache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/bps-backup",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/cache",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/aiowps_backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/backupbuddy_temp",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/backupbuddy_backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/ithemes-security\/backups",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/mainwp\/backup",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/pb_backupbuddy",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/snapshots",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/sucuri",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wp-clone",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wp_all_backup",
+                    "\/home\/evnfc\/domains\/evnfc.twendeesoft.com\/public_html\/wp-content\/uploads\/wpbackitup_backups"
+                ],
+                "Global": [],
+                "Instance": []
+            },
+            "Files": {
+                "Size": [],
+                "Warning": [],
+                "Unreadable": [],
+                "Core": [],
+                "Global": [
+                    "error_log",
+                    "error.log",
+                    "debug_log",
+                    "ws_ftp.log",
+                    "dbcache",
+                    "pgcache",
+                    "objectcache",
+                    ".DS_Store"
+                ],
+                "Instance": []
+            },
+            "Exts": {
+                "Core": [],
+                "Global": [],
+                "Instance": []
+            },
+            "UDirCount": 0,
+            "UFileCount": 0,
+            "UExtCount": 0,
+            "TreeSize": [],
+            "TreeWarning": []
+        },
+        "RecursiveLinks": [],
+        "UnreadableItems": [],
+        "Status": {
+            "Size": "Good",
+            "Names": "Good",
+            "UnreadableItems": "Good",
+            "MigratePackage": "Good",
+            "CanbeMigratePackage": true,
+            "showCreateProcStatus": "Good",
+            "showCreateProc": true,
+            "AddonSites": "Good"
+        },
+        "Dirs": [],
+        "Files": []
+    },
+    "DB": {
+        "Status": {
+            "Success": true,
+            "DB_Case": "Good",
+            "DB_Rows": "Good",
+            "DB_Size": "Good",
+            "TBL_Case": "Good",
+            "TBL_Rows": "Good",
+            "TBL_Size": "Good"
+        },
+        "Size": "15.02MB",
+        "Rows": "7,377",
+        "TableCount": 39,
+        "TableList": {
+            "evnn_addonlibrary_addons": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_addonlibrary_categories": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_commentmeta": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_comments": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "96KB",
+                "USize": 98304
+            },
+            "evnn_duplicator_packages": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_formdata": {
+                "Case": 0,
+                "Rows": "4",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_content_status": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_core_status": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_flags": {
+                "Case": 0,
+                "Rows": "65",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_languages": {
+                "Case": 0,
+                "Rows": "65",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_icl_languages_translations": {
+                "Case": 0,
+                "Rows": "4,225",
+                "Size": "384KB",
+                "USize": 393216
+            },
+            "evnn_icl_locale_map": {
+                "Case": 0,
+                "Rows": "2",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_message_status": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_icl_mo_files_domains": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_node": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_reminders": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_string_batches": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_string_packages": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_string_pages": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_icl_string_positions": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_string_status": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_string_translations": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_string_urls": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_strings": {
+                "Case": 0,
+                "Rows": "3",
+                "Size": "112KB",
+                "USize": 114688
+            },
+            "evnn_icl_translate": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_translate_job": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_translation_batches": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "16KB",
+                "USize": 16384
+            },
+            "evnn_icl_translation_status": {
+                "Case": 0,
+                "Rows": "10",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_icl_translations": {
+                "Case": 0,
+                "Rows": "112",
+                "Size": "80KB",
+                "USize": 81920
+            },
+            "evnn_links": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_options": {
+                "Case": 0,
+                "Rows": "430",
+                "Size": "2.11MB",
+                "USize": 2211840
+            },
+            "evnn_postmeta": {
+                "Case": 0,
+                "Rows": "2,008",
+                "Size": "8.72MB",
+                "USize": 9142272
+            },
+            "evnn_posts": {
+                "Case": 0,
+                "Rows": "348",
+                "Size": "2.52MB",
+                "USize": 2637824
+            },
+            "evnn_term_relationships": {
+                "Case": 0,
+                "Rows": "28",
+                "Size": "32KB",
+                "USize": 32768
+            },
+            "evnn_term_taxonomy": {
+                "Case": 0,
+                "Rows": "6",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_termmeta": {
+                "Case": 0,
+                "Rows": "0",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_terms": {
+                "Case": 0,
+                "Rows": "6",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_usermeta": {
+                "Case": 0,
+                "Rows": "63",
+                "Size": "48KB",
+                "USize": 49152
+            },
+            "evnn_users": {
+                "Case": 0,
+                "Rows": "2",
+                "Size": "64KB",
+                "USize": 65536
+            }
+        },
+        "RawSize": 15745024
+    },
+    "LL": {
+        "TotalSize": "15.02MB",
+        "Status": {
+            "TotalSize": "Good"
+        }
+    }
+}

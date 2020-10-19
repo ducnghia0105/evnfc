@@ -1,0 +1,84 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 16 October, 2020 10:10 am
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.3.38
+WORDPRESS:	5.5.1
+PHP INFO:	7.2.22 | SAPI: litespeed
+SERVER:		LiteSpeed 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 4294967296 (1024M default) 
+MEMORY STACK: 6MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported
+SQL CREATED: evn_solar_28dcab7acddbcf5d2272_20201016101028_database.sql
+SQL FILE SIZE: 10.35MB (10854232)
+SQL FILE TIME: 2020-10-16 10:10:43
+SQL RUNTIME: 0.94 sec.
+
+********************************************************************************
+ARCHIVE (ZIP):
+********************************************************************************
+ARCHIVE DIR:  /home/evnfc/domains/evnfc.twendeesoft.com/public_html
+ARCHIVE FILE: evn_solar_28dcab7acddbcf5d2272_20201016101028_archive.zip
+FILTERS: *ON*
+DIRS:
+	not set
+FILES:
+	not set
+EXTS:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	0B
+STATS:	Dirs 0 | Files 0
+SQL ADDED: evn_solar_28dcab7acddbcf5d2272_20201016101028_database.sql
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1
+    [filename] => /home/evnfc/domains/evnfc.twendeesoft.com/public_html/wp-content/backups-dup-lite/tmp/evn_solar_28dcab7acddbcf5d2272_20201016101028_archive.zip
+    [comment] => 
+)
+
+FILE ADDED TO ZIP: 0
+COMPRESSION RESULT: '1'
+COMPRESSED SIZE: 5.05MB
+ARCHIVE RUNTIME: 0.63 sec.
+MEMORY STACK: 6MB
+building installer
+add_extra_files1
+add_extra_files2
+add_extra_files3
+add_extra_files4
+Doing archive file check
+add_extra_files5
+add_extra_files6
+add_extra_files8
+Successfully opened zip /home/evnfc/domains/evnfc.twendeesoft.com/public_html/wp-content/backups-dup-lite/tmp/evn_solar_28dcab7acddbcf5d2272_20201016101028_archive.zip
+Adding enhanced installer files to archive using ZipArchive
+Installer files added to archive
+Added to archive
+After ziparchive close when adding installer
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 10.35MB
+INSTALLER FILE: 61.31KB
+ARCHIVE FILE: 6.51MB 
+EXPECTED FILE/DIRECTORY COUNT: 0
+ACTUAL FILE/DIRECTORY COUNT: 0
+ARCHIVE CONSISTENCY TEST: Pass
+
+********************************************************************************
+RECORD ID:[3]
+TOTAL PROCESS RUNTIME: 2.22 sec.
+PEAK PHP MEMORY USED: 17.99MB
+DONE PROCESSING => evn_solar 16 October, 2020 10:10 am
+

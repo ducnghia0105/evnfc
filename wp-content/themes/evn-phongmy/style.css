@@ -1,0 +1,400 @@
+/*
+Theme Name: EVN Solar
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Phong My Website
+Author URI: phongmy.vn
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: phongmy
+
+*/
+
+
+
+/* general */
+:root{
+    --pri : #4DB769;
+}
+.btn-primary {
+    color: #fff;
+    background-color:#4db769 !important;
+    border-color: #4db769 !important;
+}
+
+/* HEADERRRRRRR */
+
+.formsearch button {
+    margin-top: 10px;
+}
+
+.btn-lh-hotro a{
+    color: #fff;
+}
+ul#menu-main > li > a {
+    padding: 30px 10px;
+}
+
+
+li.searchform a {
+    position: relative;
+    left: -25px;
+    top: 9px;
+}
+
+li.login {
+    padding-right: 15px;
+}
+
+.headerbtn svg {
+    position: relative;
+    top: 2px;
+}
+
+
+/* start popup search */
+
+.close.tatpopup {
+    opacity: 1;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+img.icon-search{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    width: 22px;
+}
+input.nhaptukhoa {
+    border: 0px;
+    box-shadow: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+}
+.nhaptukhoa:focus{
+        border-color: #000 !important;
+        box-shadow: none !important;
+}
+button.btn.btn-primary.my-2.my-sm-0 {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    top: 0;
+}
+form.form.formsearch.my-2.my-lg-0 {
+    position: relative;
+}
+/* end popup search */
+
+
+.navbar-nav>li>a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 17px;
+}
+.dropdown-menu>li>a{
+    font-size: 17px;
+}
+.dropdown-menu{
+    min-width: 200px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  ul.nav.navbar-nav.navbar-right a {
+    padding: 23px 0px;
+}
+ul.navbar-right li.headerbtn.login a {
+    line-height: 34px;
+}
+ul.nav-right svg{
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+
+/* HOMEREEEEEEE */
+.contact-content{
+    position: relative;
+}
+.content-before.before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: url(assets/images/spin.gif) #ddddddb5 no-repeat;
+    background-size: 20%;
+    display: block;
+    background-position: 50% 50%;
+}
+
+.content-before.after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: url(assets/images/spin.gif) #ddddddb5 no-repeat;
+    background-size: 20%;
+    display: block;
+    background-position: 50% 50%;
+}
+
+
+.heading4{font-size:18px;font-weight:400;color:#111111;margin:0px 0px 5px 0px;}
+.heading1{font-size:30px;line-height:20px;text-transform:uppercase;color:#1b2834;font-weight:900;}
+.content-quality{float:left;width:193px;}
+.content-quality p{margin-left:10px;font-size:14px;font-weight:600;line-height:17px;}
+.content-quality p span{display:block;}
+.tabtop li a{font-weight:700;color:#1b2834;border-radius:0px;margin-right:22.008px;border:1px solid #ebebeb !important;}
+.tabtop .active a:before{content:"♦";position:absolute;top:15px;left:82px;color:var(--pri);font-size:30px;}
+.tabtop li a:hover{color:var(--pri) !important;text-decoration:none;}
+.tabtop .active a:hover{color:#fff !important;}
+.tabtop .active a{background-color:var(--pri) !important;color:#FFF !important;}
+.margin-tops{margin-top:30px;}
+.tabtop li a:last-child{padding:10px 22px;}
+.thbada{padding:10px 28px !important;}
+section p{}
+.margin-tops4{margin-top:20px;}
+.tabsetting{padding-top:6px;}
+.services{background-color:#d4d4d4;min-height:710px;padding:65px 0 27px 0;}
+.services a:hover{color:#000;}
+.services h1{margin-top:0px !important;}
+.heading-container p{text-align:center;font-size:16px !important;text-transform:uppercase;}
+
+
+.contact-img img{
+    object-fit: cover;
+}
+
+
+
+
+/* slider */
+
+
+.owl-carousel--item img{
+    border: 1px solid #ddd;
+    padding:15px;
+    height: 80px;
+    width: 120px;
+    object-fit: contain;
+}
+.web-background-lite{
+    position: relative;
+    margin-top: 49px;
+}
+.web-background-lite .owl-nav{
+    font-size: 40px;
+}
+.owl-nav img {
+    width: 30px;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
+.owl-nav .owl-prev img{
+    left: -3px;
+}
+.web-background-lite .owl-nav button {
+    position: absolute;
+    top: calc(50% - 20px);
+    font-size: 35px;
+    background: #fff !important;
+    z-index: 9999;
+    text-decoration: none;
+    width: 63px;
+    height: 63px;
+    padding-bottom: 64px !important;
+    border-radius: 100% !important;
+}
+
+.web-background-lite .owl-nav button:hover {
+    background: var(--pri) !important;
+}
+
+
+.web-background-lite button.owl-next {
+    right: 15px;
+}
+
+.web-background-lite button.owl-prev {
+    left: 15px;
+}
+
+
+
+/* page */
+.page-title {
+    position: relative;
+}
+.page-title__content {
+    padding: 80px 65px;
+    background-color: #154397;
+}
+.page-title__inner {
+    position: absolute;
+    left: 0;
+    bottom: 13%;
+    right: 0;
+}
+
+.page-title__subtitle {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.page-title__title {
+    font-size: 40px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 1.2;
+}
+.page-title__subtitle:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    height: 1px;
+}
+
+@media (min-width: 1440px){
+    .page-title {
+        height: 720px;
+    }
+}
+
+@media (min-width: 1200px){
+    .page-title {
+        height: 520px;
+    }
+}
+
+
+/* res */
+@media(min-width:768px){
+    .navbar-right {
+        margin-right: 0 !important;
+    }
+}
+@media(max-width:767px){
+
+    li.searchform a{
+        top: unset;
+        left: unset;
+    }
+    .navbar-brand{
+        padding: 0 15px !important;
+    }
+    .web-background-lite .owl-nav button {
+        width: 40px;
+        height: 40px;
+        margin: 0 !important;
+    }
+    .owl-nav img {
+        width: 15px;
+        top: -11px;
+    }
+
+    .navbar-brand {
+        padding: 0 10px;
+    }
+    .navbar-nav>li{
+        border-bottom: 1px solid #ddd;
+    }
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    ul.nav.navbar-nav.navbar-right a {
+        padding: 10px 15px;
+    }
+   
+
+    ul.nav.navbar-nav.navbar-right li{
+        border: none;
+    }
+    .home-content-top .col-md-8{
+        padding-top:30px;
+    }
+    .contact-img, .contact-content{
+        width: 100%;
+    }
+    .contact-content{
+        padding:15px;
+    }
+    .contact-content input,.contact-content select {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .dis-inflex{
+        display: block;
+    }
+
+    .web-laisuat{
+        width: 100%;
+    }
+    .web-cauhoi {
+        position: relative;
+        margin-left: unset;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .chinhanh-left, .chinhanh-right{
+        width: 100%;
+    }
+    .tabtop li a:last-child {
+        padding: 10px 15px;
+    }
+    .tabtop li a {
+        margin-right: unset;
+    }
+    .web-tab-contact {
+        margin: 30px auto;
+    }
+}
+
+
+
+
+
+
+
+
+/* Form ajax */
+
+.formdata span{
+    position: relative;
+}
+.formdata span label{
+    position: absolute;
+    left: 0;
+    color: red;
+    font-size: 12px;
+    font-weight: 100;
+    bottom: -33px;
+}
+
+span.wrap_email label {
+    left: 5px;
+}

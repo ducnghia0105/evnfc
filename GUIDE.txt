@@ -1,0 +1,12 @@
+MO FILE WP-CONFIG.PHP
+
+THAY DOI LAI DB_USER
+DB_NAME
+DB_PASS
+
+CUOI FILE,
+UNCOMMENT
+// define( 'WP_HOME', 'http://online.evnfc.vn' );
+// define( 'WP_SITEURL', 'http://online.evnfc.vn' );
+
+VOI 2 LINK TREN LA LINK CUA WEBSITE.
