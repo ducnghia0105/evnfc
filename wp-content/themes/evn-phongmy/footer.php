@@ -1,6 +1,7 @@
-
 <?php wp_footer();?>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+<script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" id="jvalidate"></script>
+
+<!-- <script src="https://momentjs.com/downloads/moment.js" type="text/javascript"></script> -->
 
 <?php 
         $diachi1 = get_field('diachi1','option');
@@ -75,8 +76,40 @@
   </div>
 </div>
 
+
+
           
       <script>
+
+         //datetime picker
+                  $(function () {
+                     var today = new Date();
+                     var yesterday = today.setDate(today.getDate() - 1);
+                     $('#namsinh').datetimepicker({
+                        format: 'DD/MM/YYYY',
+                        // defaultDate:today,
+                        minDate:'+1970/01/01',
+                        maxDate:yesterday,
+                     });
+                     $("#namsinh").val("");
+                  });
+
+               $(document).ready(function(){
+
+                        //add comma when input is number
+                        $("input[name='thunhap']").keyup(function(event){
+                           // skip for arrow keys
+                           if(event.which >= 37 && event.which <= 40){
+                              event.preventDefault();
+                           }
+                           var $this = $(this);
+                           var num = $this.val().replace(/,/gi, "");
+                           var num2 = num.split(/(?=(?:\d{3})+$)/).join(",");
+                           $this.val(num2);
+                     });
+               });
+
+
          function openCity(evt, cityName) {
            var i, x, tablinks;
            x = document.getElementsByClassName("city");
@@ -167,6 +200,16 @@
 
 $(function() {
 
+
+
+   
+
+   jQuery.validator.addMethod('allowComma', function (value) {
+   //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
+   var regex= /^[0-9.,]+$/; //allow , and any number
+    return value.trim().match(regex);
+  });
+
    jQuery.validator.addMethod('valid_phone', function (value) {
    //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
    var regex= /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/; //allow + and any number
@@ -180,7 +223,11 @@ $(function() {
    $("form[name='formdata']").validate({
       rules: {
          name: "required",
-
+         namsinh: {
+            required : true,
+            // maxlength: 4,
+            // minlength: 4
+         },
          sdt:  {
             required : true,
             // digits: true,
@@ -196,24 +243,48 @@ $(function() {
          cmnd: {
          required: true,
          digits: true
-         }
+         },
+         donvicongtac: "required",
+         phongban: "required",
+         chucdanh: "required",
+         thunhap: {
+            required: true,
+            // digits: true,
+            allowComma: true
+         },
+         diachithuongtru: "required",
+         diachilapdat: "required"
          
       },
       messages: {
          name: name_vn,
+         namsinh: {
+            required: "Năm sinh sai",
+            // digits: "Năm sinh sai",
+            // minlength: "Năm sinh sai",
+            // maxlength: "Năm sinh sai",
+         },
          sdt: {
-            valid_phone: "SĐT chưa hợp lệ",
-            required: "Vui lòng điền SDT",
-            // digits: "SĐT chưa hợp lệ",
-            minlength: "SĐT chưa hợp lệ",
-            maxlength: "SĐT chưa hợp lệ"
+            valid_phone: "Vui lòng điền SĐT",
+            required: "Vui lòng điền SĐT",
+            minlength: "Vui lòng điền SĐT",
+            maxlength: "Vui lòng điền SĐT",
          },
          email: {
-            required: "Vui lòng điền email",
-            email: "Email không hợp lệ"
+            required: "Vui lòng điền Email",
+            email: "Vui lòng điền Email",
          },
-         cmnd: "Số CMND không hợp lệ"
-         // email: "Please enter a valid email address"
+         cmnd: "Hãy kiểm tra CMND",
+         donvicongtac: "Vui lòng nhập đơn vị công tác",
+         phongban: "Vui lòng nhập phòng ban",
+         chucdanh: "Vui lòng nhập chức danh",
+         thunhap:{
+            required: "Vui lòng nhập thu nhập",
+            allowComma: "Hãy nhập số",
+         },
+         diachithuongtru: "Vui lòng nhập địa chỉ thường trú",
+         diachilapdat: "Vui lòng nhập địa chỉ lắp đặt"
+
       },
       submitHandler: function(form) {
          // form.submit();
@@ -221,13 +292,19 @@ $(function() {
 
          // start ajax
 
-         var name = $('.name').val();
+               var name = $('.name').val();
+               var namsinh = $('.namsinh').val();
+               var cmnd = $('.cmnd').val();
                var sdt = $('.sdt').val();
                var email = $('.email').val();
-               var cmnd = $('.cmnd').val();
-               var coquan = $('.coquan').val();
-               var diachilap = $('.diachilap').val();
-               var thanhpho = $('.thanhpho option:selected').text();
+              
+               var donvicongtac = $('.donvicongtac').val();
+               var phongban = $('.phongban').val();
+               var chucdanh = $('.chucdanh').val();
+               var hopdong = $('.hopdong option:selected').text();
+               var thunhap = $('.thunhap').val();
+               var diachithuongtru = $('.diachithuongtru').val();
+               var diachilapdat = $('.diachilapdat').val();
                
                event.preventDefault();
 
@@ -238,12 +315,17 @@ $(function() {
                     data : {
                         action: "senddata", //Tên action
                         name: name,
+                        namsinh:namsinh,
                         sdt: sdt,
                         email : email,
                         cmnd: cmnd,
-                        coquan:coquan,
-                        diachilap: diachilap,
-                        thanhpho : thanhpho
+                        donvicongtac:donvicongtac,
+                        phongban:phongban,
+                        chucdanh:chucdanh,
+                        hopdong: hopdong,
+                        thunhap: thunhap,
+                        diachithuongtru: diachithuongtru,
+                        diachilapdat : diachilapdat
                     },
                     context: this,
                     beforeSend: function(){

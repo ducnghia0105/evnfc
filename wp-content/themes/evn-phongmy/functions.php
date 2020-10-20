@@ -55,15 +55,20 @@ function contactdata(){
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>NGÀY DK</th>
+						<th>NGÀY</th>
 						<th>HỌ TÊN</th>
+						<th>NĂM SINH</th>
 						<th>SDT</th>
 						<th>EMAIL</th>
 						<th>CMND</th>
+						<th>PHÒNG BAN</th>
+						<th>CHỨC VỤ</th>
+						<th>LOẠI HĐ</th>
 
-						<th>TÊN CƠ QUAN</th>
-						<th>ĐỊA CHỈ LẮP</th>
-						<th>TỈNH THÀNH</th>
+						<th>THU NHẬP</th>
+						<th>ĐC LẮP</th>
+						<th>THƯỜNG TRÚ</th>
+						<th>ĐV CÔNG TÁC</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -79,12 +84,18 @@ function contactdata(){
 								<td><?php echo $data->ID;?></td>
 								<td><?php echo $newDate = date("d/m/Y", strtotime($data->NGAYDK));?></td>
 								<td><?php echo $data->HOTEN;?></td>
+								<td><?php echo $data->NAMSINH;?></td>
 								<td><?php echo $data->SDT;?></td>
 								<td><?php echo $data->EMAIL;?></td>
 								<td><?php echo $data->CMND;?></td>
-								<td><?php echo $data->coquan;?></td>
+								<td><?php echo $data->PHONGBAN;?></td>
+								<td><?php echo $data->CHUCDANH;?></td>
+								<td><?php echo $data->HOPDONG;?></td>
+
+								<td><?php echo $data->THUNHAP;?></td>
 								<td><?php echo $data->diachilap;?></td>
-								<td><?php echo $data->TINHTHANH;?></td>
+								<td><?php echo $data->DIACHITHUONGTRU;?></td>
+								<td><?php echo $data->DONVICONGTAC;?></td>
 							</tr>
 						<?php endforeach; ?>
 				
@@ -319,14 +330,19 @@ function custom_menu_page_removing() {
 	function thongbao_init() {
 	
 		$name = (isset($_POST['name']))?esc_attr($_POST['name']) : '';
+		$namsinh = (isset($_POST['namsinh']))?esc_attr($_POST['namsinh']) : '';
 		$sdt = (isset($_POST['sdt']))?esc_attr($_POST['sdt']) : '';
 		$email = (isset($_POST['email']))?esc_attr($_POST['email']) : '';
 		$cmnd = (isset($_POST['cmnd']))?esc_attr($_POST['cmnd']) : '';
 
-		$coquan = (isset($_POST['coquan']))?esc_attr($_POST['coquan']) : '';
-		$diachilap = (isset($_POST['diachilap']))?esc_attr($_POST['diachilap']) : '';
+		$donvicongtac = (isset($_POST['donvicongtac']))?esc_attr($_POST['donvicongtac']) : '';
+		$phongban = (isset($_POST['phongban']))?esc_attr($_POST['phongban']) : '';
+		$chucdanh = (isset($_POST['chucdanh']))?esc_attr($_POST['chucdanh']) : '';
 
-		$thanhpho = (isset($_POST['thanhpho']))?esc_attr($_POST['thanhpho']) : '';
+		$hopdong = (isset($_POST['hopdong']))?esc_attr($_POST['hopdong']) : '';
+		$thunhap = (isset($_POST['thunhap']))?esc_attr($_POST['thunhap']) : '';
+		$diachithuongtru = (isset($_POST['diachithuongtru']))?esc_attr($_POST['diachithuongtru']) : '';
+		$diachilapdat = (isset($_POST['diachilapdat']))?esc_attr($_POST['diachilapdat']) : '';
 
 		$currDate = get_the_date();
 
@@ -340,14 +356,19 @@ function custom_menu_page_removing() {
 			array( 
 				'NGAYDK' 	=> $dateInsert, 
 				'HOTEN'  	=> $name,
+				'NAMSINH'	=> $namsinh,
 				'SDT'	 	=> $sdt,
 				'EMAIL'	 	=> $email,
 				'CMND'   	=> $cmnd,
-				'coquan'   	=> $coquan,
-				'diachilap'	=> $diachilap,
-				'TINHTHANH'	=> $thanhpho	
+				'PHONGBAN'   	=> $phongban,
+				'CHUCDANH'	=> $chucdanh,
+				'HOPDONG'	=> $hopdong,
+				'THUNHAP'	=> $thunhap,
+				'diachilap'	=> $diachilapdat,
+				'DIACHITHUONGTRU'	=> $diachithuongtru,
+				'DONVICONGTAC'	=> $donvicongtac
 			), 
-			array( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s' ) 
+			array( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s' ) 
 		);
 
 		if($result_check){
@@ -405,3 +426,14 @@ function load_admin_styles() {
 	wp_enqueue_script('bootstrapjs', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js');
 	wp_enqueue_script('admjs', get_stylesheet_directory_uri() . '/assets/js/adminjs.js');
 }  
+
+
+
+
+
+add_action( 'admin_init', 'my_remove_menu_pages' );
+function my_remove_menu_pages() {
+
+	//remove_menu_page( 'edit.php?post_type=acf-field-group' );
+   
+}

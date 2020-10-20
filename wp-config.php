@@ -146,7 +146,7 @@ $table_prefix = 'evnn_';
 
  */
 
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 
 /* That's all, stop editing! Happy publishing. */
@@ -165,5 +165,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once ABSPATH . 'wp-settings.php';
 
-// define( 'WP_HOME', 'http://online.evnfc.vn' );
-// define( 'WP_SITEURL', 'http://online.evnfc.vn' );
