@@ -29,6 +29,16 @@ Text Domain: phongmy
 
 /* HEADERRRRRRR */
 
+#popupsearch .modal-content{
+    padding: 30px;
+}
+
+@media(min-width:768px){
+    #popupsearch .modal-content{
+        padding: 50px;
+    }
+}
+
 .formsearch button {
     margin-top: 10px;
 }
@@ -385,6 +395,7 @@ section p{}
 
 .formdata span{
     position: relative;
+    display: block;
 }
 .formdata span label{
     position: absolute;
@@ -392,7 +403,7 @@ section p{}
     color: red;
     font-size: 12px;
     font-weight: 100;
-    bottom: -33px;
+    bottom: -24px;
 }
 
 span.wrap_email label {
