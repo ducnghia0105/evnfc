@@ -209,31 +209,47 @@ $(function() {
       return value.trim().match(regex);
    });
 
+   //ko cho phep cac ky tu dac biet
+   jQuery.validator.addMethod('khongdacbiet', function (value) {
+      // var regex= /^[a-zA-Z á à ạ ê ế ề ệ ễ ú ù ụ ũ ư ứ ừ ự í ì ị ĩ ô ố ồ ộ ỗ đ  ]+$/; //allow , and any number
+      var regex = /[`*~<>;':"/[\\]|{}()%!?=_+-]/;
+      return value.trim().match(regex);
+   });
+   
+
+   //cho phep cac ky tu trong danh sach
    jQuery.validator.addMethod('notspecial', function (value) {
-      var regex= /^[a-zA-Z ]+$/; //allow , and any number
+      // var regex= /^[a-zA-Z á à ạ ê ế ề ệ ễ ú ù ụ ũ ư ứ ừ ự í ì ị ĩ ô ố ồ ộ ỗ đ  ]+$/; //allow , and any number
+      // var regex = /^[a-zA-Z à á ạ ả ã â ầ ấ ậ è é ẹ ẻ ẽ ê ề ế ệ ể ễ ì í ị ỉ ĩ ò ó ọ ỏ õ ô ồ ố ộ ổ ỗ ơ ờ ớ ợ ở ỡ ù ú ụ ủ ũ ư ừ ứ ự ử ữ ỳ ý ỵ ỷ ỹ đ  ]+$/;
+      var regex = /[a-zA-Z à á ạ ả ã â ầ ấ ậ è é ẹ ẻ ẽ ê ề ế ệ ể ễ ì í ị ỉ ĩ ò ó ọ ỏ õ ô ồ ố ộ ổ ỗ ơ ờ ớ ợ ở ỡ ù ú ụ ủ ũ ư ừ ứ ự ử ữ ỳ ý ỵ ỷ ỹ đ , .  ]+$/;
+      return value.trim().match(regex);
+   });
+
+   jQuery.validator.addMethod('namenospecial', function (value) {
+      // var regex= /^[a-zA-Z á à ạ ê ế ề ệ ễ ú ù ụ ũ ư ứ ừ ự í ì ị ĩ ô ố ồ ộ ỗ đ  ]+$/; //allow , and any number
+      // var regex = /^[a-zA-Z à á ạ ả ã â ầ ấ ậ è é ẹ ẻ ẽ ê ề ế ệ ể ễ ì í ị ỉ ĩ ò ó ọ ỏ õ ô ồ ố ộ ổ ỗ ơ ờ ớ ợ ở ỡ ù ú ụ ủ ũ ư ừ ứ ự ử ữ ỳ ý ỵ ỷ ỹ đ  ]+$/;
+      var regex = /^[a-zA-Z à á ạ ả ã â ầ ấ ậ è é ẹ ẻ ẽ ê ề ế ệ ể ễ ì í ị ỉ ĩ ò ó ọ ỏ õ ô ồ ố ộ ổ ỗ ơ ờ ớ ợ ở ỡ ù ú ụ ủ ũ ư ừ ứ ự ử ữ ỳ ý ỵ ỷ ỹ đ  ]+$/;
       return value.trim().match(regex);
    });
 
    jQuery.validator.addMethod('valid_phone', function (value) {
    //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
-   var regex= /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/; //allow + and any number
+   // var regex= /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/; //allow + and any number
+   var regex = /^(032|033|034|035|036|037|038|039|086|096|097|098|081|082|083|084|085|088|091|094|056|058|092|070|076|077|078|079|089|090|093|099|059)+([0-9]{7})$/; //valid đầu số các nhà mạng mới
     return value.trim().match(regex);
   });
 
    var name_vn = 'Vui lòng nhập họ tên';
-   var name_en = 'Please enter full name';
 
 
    $("form[name='formdata']").validate({
       rules: {
          name: {
             required : true,
-            notspecial: true
+            namenospecial: true
          },
          namsinh: {
             required : true,
-            // maxlength: 4,
-            // minlength: 4
          },
          sdt:  {
             required : true,
@@ -249,30 +265,44 @@ $(function() {
          },
          cmnd: {
          required: true,
-         digits: true
+         digits: true,
+         maxlength: 12,
+         minlength: 12
          },
-         donvicongtac: "required",
-         phongban: "required",
-         chucdanh: "required",
+         donvicongtac: {
+            required: true,
+            notspecial: true
+         },
+         phongban: {
+            required: true,
+            notspecial: true
+         },
+         chucdanh: {
+            required: true,
+            notspecial: true
+         },
          thunhap: {
             required: true,
             // digits: true,
             allowComma: true
          },
-         diachithuongtru: "required",
-         diachilapdat: "required"
+         diachithuongtru: {
+            required: true,
+            notspecial: true
+         },
+         diachilapdat: {
+            required: true,
+            notspecial: true
+         }
          
       },
       messages: {
          name: {
             required: name_vn,
-            notspecial: name_vn
+            namenospecial: name_vn
          },
          namsinh: {
             required: "Năm sinh sai",
-            // digits: "Năm sinh sai",
-            // minlength: "Năm sinh sai",
-            // maxlength: "Năm sinh sai",
          },
          sdt: {
             valid_phone: "Vui lòng điền SĐT",
@@ -284,16 +314,37 @@ $(function() {
             required: "Vui lòng điền Email",
             email: "Vui lòng điền Email",
          },
-         cmnd: "Hãy kiểm tra CMND",
-         donvicongtac: "Vui lòng nhập đơn vị công tác",
-         phongban: "Vui lòng nhập phòng ban",
-         chucdanh: "Vui lòng nhập chức danh",
+         cmnd: {
+            required: "Hãy kiểm tra CMND",
+            digits: "Hãy kiểm tra CMND",
+            maxlength: "Hãy kiểm tra CMND",
+            minlength: "Hãy kiểm tra CMND",
+         },
+         donvicongtac:{
+            required: "Vui lòng nhập đơn vị công tác" ,
+            notspecial: "Vui lòng nhập đơn vị công tác" ,
+              
+         }, 
+         phongban: {
+            required:"Vui lòng nhập phòng ban",
+            notspecial: "Vui lòng nhập phòng ban",
+         },
+         chucdanh: {
+            required: "Vui lòng nhập chức danh",
+            notspecial: "Vui lòng nhập chức danh"
+         },
          thunhap:{
             required: "Vui lòng nhập thu nhập",
             allowComma: "Hãy nhập số",
          },
-         diachithuongtru: "Vui lòng nhập địa chỉ thường trú",
-         diachilapdat: "Vui lòng nhập địa chỉ lắp đặt"
+         diachithuongtru: {
+            required:"Vui lòng nhập địa chỉ thường trú",
+            notspecial: "Vui lòng nhập địa chỉ thường trú"
+         },
+         diachilapdat: {
+            required: "Vui lòng nhập địa chỉ lắp đặt",
+            notspecial: "Vui lòng nhập địa chỉ lắp đặt"
+         }
 
       },
       submitHandler: function(form) {

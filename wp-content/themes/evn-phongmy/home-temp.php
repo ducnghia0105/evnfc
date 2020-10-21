@@ -19,7 +19,7 @@ get_header();
                                              <div class="bg-dangky">
                                                       <?php if($sliderlink): ?>
                                                          <div class="btn-dangky-ngay">
-                                                            <a href="<? echo $sliderlink;?>">Đăng ký vay <img src="<?php echo IMGPATH;?>right.png"></a>
+                                                            <a href="<?php echo $sliderlink;?>">Đăng ký vay <img src="<?php echo IMGPATH;?>right.png"></a>
                                                          </div>
                                                       <?php endif; ?>
                                              </div>
