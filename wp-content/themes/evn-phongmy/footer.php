@@ -1,5 +1,5 @@
 <?php wp_footer();?>
-<script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" id="jvalidate"></script>
+<script type='text/javascript' src="<?php echo JSPATH;?>jquery.validate.min.js" id="jvalidate"></script>
 
 <!-- <script src="https://momentjs.com/downloads/moment.js" type="text/javascript"></script> -->
 
@@ -205,10 +205,14 @@ $(function() {
    
 
    jQuery.validator.addMethod('allowComma', function (value) {
-   //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
-   var regex= /^[0-9.,]+$/; //allow , and any number
-    return value.trim().match(regex);
-  });
+      var regex= /^[0-9.,]+$/; //allow , and any number
+      return value.trim().match(regex);
+   });
+
+   jQuery.validator.addMethod('notspecial', function (value) {
+      var regex= /^[a-zA-Z ]+$/; //allow , and any number
+      return value.trim().match(regex);
+   });
 
    jQuery.validator.addMethod('valid_phone', function (value) {
    //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
@@ -222,7 +226,10 @@ $(function() {
 
    $("form[name='formdata']").validate({
       rules: {
-         name: "required",
+         name: {
+            required : true,
+            notspecial: true
+         },
          namsinh: {
             required : true,
             // maxlength: 4,
@@ -257,7 +264,10 @@ $(function() {
          
       },
       messages: {
-         name: name_vn,
+         name: {
+            required: name_vn,
+            notspecial: name_vn
+         },
          namsinh: {
             required: "Năm sinh sai",
             // digits: "Năm sinh sai",

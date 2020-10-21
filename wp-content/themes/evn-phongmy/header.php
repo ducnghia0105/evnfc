@@ -6,33 +6,27 @@
     ?>
     <title><?php bloginfo('name'); ?> &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- <link href="images/..." rel="shortcut icon"> -->
     <meta charset="UTF-8">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
 
     <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>setting.css">
     <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>evn-web.css">
     <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>w3.css">
 	<link rel="icon" href="<?php echo $fav;?>" type="image/x-icon"/>
+
 	<?php wp_head(); ?>
-
-    <script type="text/javascript" src="<?php echo JSPATH; ?>jquery-2.2.3.min.js" id="jquerycode"></script>
-        <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-          <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
-        
+         <script type="text/javascript" src="<?php echo JSPATH; ?>jquery-2.2.3.min.js" id="jquerycode"></script>
+          <link href="<?php echo CSSPATH; ?>bootstrap.min.css" rel="stylesheet">
+          <link href="<?php echo CSSPATH; ?>bootstrap-datetimepicker.css" rel="stylesheet"/>
         <!-- owl -->
-        <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>owl.theme.default.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo CSSPATH; ?>owl.carousel.min.css">
 
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" id="bootstrapjs"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" id="carouseljs"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js" id="momentjs"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js" id="datetimepickerjs"></script>
+        <link rel="stylesheet" href="<?php echo CSSPATH; ?>jquery-ui.css">
+        <script type="text/javascript" src="<?php echo JSPATH; ?>bootstrap.min.js" id="bootstrapjs"></script>
+        <script type="text/javascript" src="<?php echo JSPATH; ?>owl.carousel.min.js" id="carouseljs"></script>
+        <script type="text/javascript" src="<?php echo JSPATH; ?>moment.min.js" id="momentjs"></script>
+        <script type="text/javascript" src="<?php echo JSPATH; ?>bootstrap-datetimepicker.min.js" id="datetimepickerjs"></script>
 </head>
 
 <?php
@@ -40,9 +34,6 @@
 ?>
 <!-- header start -->
 <body>
-
-
-
 
 <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -117,25 +108,18 @@
 
 
 <!-- show popup search -->
-<!-- Modal -->
 <div class="modal fade modal" id="popupsearch" tabindex="-1" role="dialog" aria-labelledby="popupsearch" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-
             <div class="modal-body">
                 <img src="<?php echo IMGPATH; ?>exit.png" class="close tatpopup" data-dismiss="modal"
                      aria-label="Close"/>
                 <form method="get" class="form formsearch my-2 my-lg-0" action="<?php bloginfo('url'); ?>">
                     <input class="form-control mr-sm-2 nhaptukhoa" type="search" name="s" id="s"
                            placeholder="Nhập từ khóa" aria-label="Search">
-                    <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">Tìm kiếm</button> -->
                     <img class="icon-search" src="<?php echo IMGPATH; ?>search.png" type="submit"/>
                 </form>
-
             </div>
-            <!-- <div class="modal-footer">
-			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-			</div> -->
         </div>
     </div>
 </div>

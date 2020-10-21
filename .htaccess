@@ -15,6 +15,12 @@
 		</IfModule>
 	</files>
 
+<Files wp-login.php>
+Order Deny,Allow
+Deny from all
+Allow from 10.11.12.13
+</Files>
+
 	<IfModule mod_rewrite.c>
 		RewriteEngine On
 

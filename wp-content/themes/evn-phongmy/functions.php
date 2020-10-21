@@ -437,3 +437,10 @@ function my_remove_menu_pages() {
 	//remove_menu_page( 'edit.php?post_type=acf-field-group' );
    
 }
+
+
+//ADMIN FAV
+function favicon4admin() {
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo('wpurl') . '/wp-content/uploads/2020/10/favicon.ico" />';
+	}
+	add_action( 'admin_head', 'favicon4admin' );
