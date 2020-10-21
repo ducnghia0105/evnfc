@@ -1,0 +1,38 @@
+/***************************************
+	2fa Settings
+****************************************/
+.two-factor-methods-table #the-list tr:nth-of-type(odd) {
+	background: #e4f0fd;
+}
+
+#itsec-application-passwords-list-table-wrapper .tablenav.top {
+	display: none;
+}
+
+.create-application-password {
+	display: flex;
+	align-items: center;
+}
+
+.create-application-password > * {
+	margin-right: .5em;
+}
+
+.create-application-password > *:last-child {
+	margin-right: 0;
+}
+
+@media all and (max-width: 768px){
+	.create-application-password {
+		flex-direction: column;
+	}
+
+	.create-application-password > * {
+		margin-right: unset;
+		margin-bottom: .5em;
+	}
+
+	.create-application-password > *:last-child {
+		margin-bottom: 0;
+	}
+}
