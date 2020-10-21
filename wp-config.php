@@ -165,3 +165,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once ABSPATH . 'wp-settings.php';
 
+//define( 'WP_HOME', 'http://solar01.evnfv.vn:8060' );
+//define( 'WP_SITEURL', 'http://solar01.evnfv.vn:8060' );
+
