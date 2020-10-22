@@ -88,7 +88,7 @@
                      $('#namsinh').datetimepicker({
                         format: 'DD/MM/YYYY',
                         // defaultDate:today,
-                        minDate:'+1970/01/01',
+                        minDate:'01/01/1970',
                         maxDate:yesterday,
                      });
                      $("#namsinh").val("");
