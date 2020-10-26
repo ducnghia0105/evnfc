@@ -1,7 +1,7 @@
 # hướng dẫn replace DB
 
 
-* query 1:
+Query 1:
 
 UPDATE evnn_options SET option_value = replace(option_value, 'http://evnfc.twendeesoft.com', 'http://solar.evnfc.vn') 
 WHERE option_name = 'home' OR option_name = 'siteurl';
