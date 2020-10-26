@@ -1,4 +1,4 @@
-<?php /* Template Name: Home page */ 
+<?php /* Template Name: Home page */
 
 get_header();
 ?>
@@ -8,18 +8,32 @@ get_header();
             <?php
                   if( have_rows('slider','option') ):
                      while( have_rows('slider','option') ) : the_row();
-                     
+
                               // Load sub field value.
                               $img = get_sub_field('slider_img');
-                              $sliderlink = get_sub_field('slider_link_x'); ?>
+                              $sliderlink = get_sub_field('slider_link_x'); 
+                              $btnTxt =  get_sub_field('txt_btn'); 
+
+                              $mainTxt =  get_sub_field('main_text'); 
+                              $subtxt =  get_sub_field('sub_text'); 
+                              ?>
 
                               <div class="item">
                                        <div class="web-background1">
                                              <img src="<?php echo $img; ?>" alt="banner"/>
                                              <div class="bg-dangky">
+
+                                                      <div class="maintxt">
+                                                         <h2><?php echo $mainTxt;?></h2>
+                                                      </div>
+
+                                                      <div class="subtxt">
+                                                         <h3><?php echo $subtxt;?></h3>
+                                                      </div>
+                                                      
                                                       <?php if($sliderlink): ?>
                                                          <div class="btn-dangky-ngay">
-                                                            <a href="<?php echo $sliderlink;?>">Đăng ký vay <img src="<?php echo IMGPATH;?>right.png"></a>
+                                                            <a href="<?php echo $sliderlink;?>"><?php echo $btnTxt;?> <img src="<?php echo IMGPATH;?>right.png"></a>
                                                          </div>
                                                       <?php endif; ?>
                                              </div>
@@ -30,12 +44,12 @@ get_header();
                      endif;
                ?>
 </div>
-         
+
 
 <!--home-content-top starts from here-->
 <section class="home-content-top">
   <div class="container">
-    
+
     <!--our-quality-shadow-->
     <div class="clearfix"></div>
     <!-- <h1 class="heading1">Welcome to webenlance</h1> -->
@@ -51,37 +65,43 @@ get_header();
             $tab2_img = get_field('tab2img','option');
             $tab2content = get_field('tab2content','option');
 
-            
+
         ?>
             <li class="active"> <a href="#tab_default_1" data-toggle="tab"> <?php echo $name1;?> </a> </li>
-            <li> <a href="#tab_default_2" data-toggle="tab"> Các bước vay</a> </li>
+            <li> <a class="cacbuocvay"> Các bước vay</a> </li>
+            <li> <a class="linktodkv" >Đăng ký vay</a> </li>
         </ul>
-        <div class="tab-content margin-tops">
-          <div class="tab-pane active fade in" id="tab_default_1">
-            <div class="col-md-4">
-              <div class="row"> <img src="<?php echo $tab1_img; ?>" class="img-responsive"> </div>
-            </div>
-               <div class="col-md-8">
-               <?php echo $tab1content; ?>
-               
-               </div>
-          </div>
 
-          <div class="tab-pane fade" id="tab_default_2">
-            <div class="col-md-4">
-             <div class="row"> <img src="<?php echo $tab2_img; ?>" class="img-responsive"> </div>
-            </div>
-               <div class="col-md-8">
-               <?php echo $tab2content; ?>   
+
+        <div class="wrap-tab-content margin-tops">
+
+               <div class="row" id="tab_default_1">
+                     <div class="col-md-4">
+                        <div class="row"> <img src="<?php echo $tab1_img; ?>" class="img-responsive"> </div>
+                     </div>
+                        <div class="col-md-8">
+                           <?php echo $tab1content; ?>
+                        </div>
                </div>
-          </div>
+
+
+               <div class="row margin-tops" id="tab_default_2">
+               <h3> Các bước vay</h3>
+                     <div class="col-md-4">
+                        <div class="row"> <img src="<?php echo $tab2_img; ?>" class="img-responsive"> </div>
+                     </div>
+                     <div class="col-md-8">
+                        <?php echo $tab2content; ?>
+                     </div>
+               </div>
+         </div>
 
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--home-content-top ends here--> 
+<!--home-content-top ends here-->
 
 <!-- end thay the -->
 
@@ -94,11 +114,11 @@ get_header();
                <img style="width: 100%;height: 100%;" src="<?php echo IMGPATH;?>img-contact.png">
             </div>
             <div class="contact-content">
-               
+
                <h2>Đăng ký vay</h2>
                <p>Hãy để lại thông tin, chúng tôi sẽ liên hệ bạn trong 24h</p>
 
-                  
+
 
                <form class="formdata" method="post" name="formdata">
                   <div class="form-group">
@@ -244,7 +264,7 @@ get_header();
                   <span class="wrap_name">
                      <input class="name" name="name" type="text" style="width: 100%" placeholder="Họ và tên"/>
                   </span>
-                  
+
                   <span class="wrap_sdt">
                      <input  class="sdt" name="sdt" placeholder="SĐT" style="width: 49%" type = "text" maxlength="15"/>
                   </span>
@@ -260,7 +280,7 @@ get_header();
                   <span class="wrap_diachi">
                      <input class="diachilap" name="diachilap" type="text" style="width: 49%" placeholder="<?php echo __('Địa chỉ lắp đặt','phongmy'); ?>"/>
                   </span>
-                  
+
                   <select class="thanhpho" style="width: 49%;margin-left: 4px;">
                            <option value="">Thành phố Hà Nội</option>
                            <option value="02">Tỉnh Hà Giang</option>
@@ -331,7 +351,7 @@ get_header();
                      <button class="hidden" type="reset"/>reset</button>
                   </div>
                </form>
-               
+
                <span class="content-before"></span>
             </div>
          </div>
@@ -349,7 +369,7 @@ get_header();
       $title03= get_field('text_cau_hỏi_thuờng_gặp_copy2','option');
       $title04= get_field('text_cau_hỏi_thuờng_gặp_copy3','option');
       $link05= get_field('link_cau_hỏi_thuờng_gặp','option');
-     
+
 ?>
 
 <!-- tab questionnn -->
@@ -379,14 +399,14 @@ get_header();
 
 
 <!-- <section id="brand"> -->
-<div class="container">
+<div class="container hidden">
     <div class="row">
       <div class="col-xs-12">
         <h1>Đối tác EVN Slolar</h1>
         <div class="owl-carousel logoitem">
 
 
-        <?php 
+        <?php
           $images = get_field('danh_sach_logo','option');
                 if( $images ): ?>
                         <?php foreach( $images as $data ): ?>

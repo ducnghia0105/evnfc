@@ -42,7 +42,7 @@ color: #666666;
     background: #4DB769;
     position: relative;
     float: left;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -75,10 +75,11 @@ display: inline-flex;
 width: 50%;
 }
 .contact-content{
-padding: 78px 60px;
+padding: 30px;
 width: 50%;
 }
 .contact-content h2{
+    margin-top: 0;
     font-weight: 500;
     font-size: 24px;
     color: #333333;
@@ -88,7 +89,7 @@ font-size: 16px;
 color: #666666;
 }
 .contact-content input,.contact-content select{
-height: 32px;
+height: 25px;
 background: #FFFFFF;
 border: 1px solid #DFDFDF;
 font-size: 14px;
@@ -98,9 +99,15 @@ outline: none;
 /* margin: 15px 0; */
 }
 .contact-content label{
-    font-weight: 400;
+    /* font-weight: 400;
     line-height: 1.6;
+    color: #333; */
+
+    font-weight: 400;
+    line-height: 8px;
     color: #333;
+    font-size: 12px;
+
 }
 .btn-hen-tuvan{
 margin-top: 22px;

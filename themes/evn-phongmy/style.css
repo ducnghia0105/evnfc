@@ -29,6 +29,16 @@ Text Domain: phongmy
 
 /* HEADERRRRRRR */
 
+.web-background1 > img {
+    /* height: 550px;
+    object-fit: cover;
+    object-position: top; */
+    height: 55vh;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
 #popupsearch .modal-content{
     padding: 30px;
 }
@@ -193,8 +203,30 @@ section p{}
 
 
 /* slider */
+.web-background1 .maintxt{
+    position: absolute !important;
+    top: 25%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.web-background1 .subtxt{
+    position: absolute !important;
+    top: 40%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.web-background1 .maintxt h2{
+    font-size: 3.2em;
+    text-shadow: 3px 1px 0px #615a5ac4;
+}
 
-
+.web-background1 h3{
+    /* margin: 0;
+    line-height: 0; */
+    text-shadow: 1px 3px 1px #615a5ac4;
+}
 .owl-carousel--item img{
     border: 1px solid #ddd;
     padding:15px;
@@ -309,6 +341,13 @@ section p{}
 }
 @media(max-width:767px){
 
+    .contact-content label {
+        margin-top: 25px;
+    }
+    .contact-content input, .contact-content select {
+        height: 30px;
+    }
+
     li.searchform a{
         top: unset;
         left: unset;
@@ -388,9 +427,6 @@ section p{}
 
 
 
-
-
-
 /* Form ajax */
 
 .formdata span{
@@ -403,7 +439,7 @@ section p{}
     color: red;
     font-size: 12px;
     font-weight: 100;
-    bottom: -24px;
+    bottom: -17px;
 }
 
 span.wrap_email label {

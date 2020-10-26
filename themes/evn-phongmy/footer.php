@@ -92,6 +92,27 @@
                         maxDate:yesterday,
                      });
                      $("#namsinh").val("");
+
+
+                     //disable type namsinh
+                     $("#namsinh").keypress(function(event) {event.preventDefault();});
+
+
+                     $('.linktodkv').click(function(){
+                           $('html, body').animate({
+                              scrollTop: $("#contact-form").offset().top - 100
+                           }, 1000);
+
+                     }); //end scroll
+
+
+                      $('.cacbuocvay').click(function(){
+                          $('html, body').animate({
+                              scrollTop: $("#tab_default_2").offset().top - 100
+                          }, 1000);
+
+                      });
+
                   });
 
                $(document).ready(function(){
@@ -225,6 +246,13 @@ $(function() {
       return value.trim().match(regex);
    });
 
+
+   //cmnd  Allow first letter = Text or Num, 2+ = num
+   jQuery.validator.addMethod('validcmnd_1', function (value) {
+      var regex = /^[A-Za-z0-9][0-9]*$/;
+      return value.trim().match(regex);
+   });
+   
    jQuery.validator.addMethod('namenospecial', function (value) {
       // var regex= /^[a-zA-Z á à ạ ê ế ề ệ ễ ú ù ụ ũ ư ứ ừ ự í ì ị ĩ ô ố ồ ộ ỗ đ  ]+$/; //allow , and any number
       // var regex = /^[a-zA-Z à á ạ ả ã â ầ ấ ậ è é ẹ ẻ ẽ ê ề ế ệ ể ễ ì í ị ỉ ĩ ò ó ọ ỏ õ ô ồ ố ộ ổ ỗ ơ ờ ớ ợ ở ỡ ù ú ụ ủ ũ ư ừ ứ ự ử ữ ỳ ý ỵ ỷ ỹ đ  ]+$/;
@@ -232,54 +260,81 @@ $(function() {
       return value.trim().match(regex);
    });
 
+
+   jQuery.validator.addMethod('is_nospe_txt_no2space', function (value) {
+      var regex = /^([a-zA-ZàÀáÁạẠảẢãÃâÂầẦấẤậẬèÈéÉẹẸẻẺẽẼêÊềỀếẾệỆểỂễỄìÌíÍịỊỉỈĩĨòÒóÓọỌỏỎõÕôÔồỒốỐộỘổỔỗỖơƠờỜớỚợỢởỞỡỠùÙúÚụỤủỦũŨưƯừỪứỨựỰửỬữỮỳỲýÝỵỴỷỶỹỸđĐ]+\s?)*\s*$/; 
+      //text + no special + no 2 space
+      return value.trim().match(regex);
+   });
+
+
+   jQuery.validator.addMethod("2firstis84", function(value, element) {
+      if($('.sdt').val().substring(0,2) == '84' ){
+         return YourValidationCode; 
+   }
+      
+}, "Please complete A");
+
+
+
    jQuery.validator.addMethod('valid_phone', function (value) {
    //  var regex = /^(09|03|07|08|05)+([0-9]{8})$/; 
    // var regex= /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/; //allow + and any number
-   var regex = /^(032|033|034|035|036|037|038|039|086|096|097|098|081|082|083|084|085|088|091|094|056|058|092|070|076|077|078|079|089|090|093|099|059)+([0-9]{7})$/; //valid đầu số các nhà mạng mới
+
+   var getsubnum2so = $('.sdt').val().substring(0,2); //2 so dau
+   var getsubnum0 = $('.sdt').val().substring(0,1); //1 so dau
+
+   if( getsubnum2so == "84" ){
+      //ap dung cho 84
+      var regex = /^(8432|8433|8434|8435|8436|8437|8438|8439|8486|8496|8497|8498|8481|8482|8483|8484|8485|8488|8491|8494|8456|8458|8492|84784|8476|8477|8478|8479|8489|84984|8493|8499|8459)+([84-9]{7})$/;
+   }else if( getsubnum0 == "0" ){
+      //ap dung cho cac dau so 0
+      var regex = /^(032|033|034|035|036|037|038|039|086|096|097|098|081|082|083|084|085|088|091|094|056|058|092|070|076|077|078|079|089|090|093|099|059)+([0-9]{7})$/;
+   }
+   
     return value.trim().match(regex);
   });
 
-   var name_vn = 'Vui lòng nhập họ tên';
+   // var name_vn = 'Vui lòng nhập họ tên';
 
 
    $("form[name='formdata']").validate({
       rules: {
          name: {
             required : true,
-            namenospecial: true
+            is_nospe_txt_no2space: true,
+            maxlength: 255,
+
          },
          namsinh: {
             required : true,
          },
          sdt:  {
             required : true,
-            // digits: true,
             valid_phone: true,
-            minlength: 8,
-            maxlength: 15
+            minlength:10,
+            maxlength: 11
          },
 
          email: {
          required: true,
-         email: true
+         email: true,
+         maxlength: 255
          },
          cmnd: {
-         required: true,
-         digits: true,
-         maxlength: 12,
-         minlength: 12
+            required: true,
+            maxlength: 12,
+            validcmnd_1: true
          },
          donvicongtac: {
-            required: true,
-            notspecial: true
+            // notspecial: true
+            maxlength: 255
          },
          phongban: {
-            required: true,
-            notspecial: true
+            maxlength: 255
          },
          chucdanh: {
-            required: true,
-            notspecial: true
+            maxlength: 255
          },
          thunhap: {
             required: true,
@@ -287,19 +342,19 @@ $(function() {
             allowComma: true
          },
          diachithuongtru: {
-            required: true,
-            notspecial: true
+            maxlength: 255
          },
          diachilapdat: {
             required: true,
-            notspecial: true
+            maxlength: 255
          }
          
       },
       messages: {
          name: {
-            required: name_vn,
-            namenospecial: name_vn
+            required: 'Vui lòng nhập họ tên',
+            is_nospe_txt_no2space: 'Vui lòng nhập họ tên',
+            maxlength: 'Vui lòng nhập họ tên'
          },
          namsinh: {
             required: "Năm sinh sai",
@@ -313,37 +368,34 @@ $(function() {
          email: {
             required: "Vui lòng điền Email",
             email: "Vui lòng điền Email",
+            maxlength: "Vui lòng điền Email",
          },
          cmnd: {
             required: "Hãy kiểm tra CMND",
-            digits: "Hãy kiểm tra CMND",
-            maxlength: "Hãy kiểm tra CMND",
-            minlength: "Hãy kiểm tra CMND",
+            validcmnd_1: "CMND không đúng định dạng",
+            maxlength: "CMND chỉ gồm 12 ký tự",
          },
          donvicongtac:{
-            required: "Vui lòng nhập đơn vị công tác" ,
-            notspecial: "Vui lòng nhập đơn vị công tác" ,
+            maxlength: "Vui lòng nhập đơn vị công tác" ,
+            // notspecial: "Vui lòng nhập đơn vị công tác" ,
               
          }, 
          phongban: {
-            required:"Vui lòng nhập phòng ban",
-            notspecial: "Vui lòng nhập phòng ban",
+            maxlength:"Vui lòng nhập phòng ban",
          },
          chucdanh: {
-            required: "Vui lòng nhập chức danh",
-            notspecial: "Vui lòng nhập chức danh"
+            maxlength: "Vui lòng nhập chức danh",
          },
          thunhap:{
             required: "Vui lòng nhập thu nhập",
             allowComma: "Hãy nhập số",
          },
          diachithuongtru: {
-            required:"Vui lòng nhập địa chỉ thường trú",
-            notspecial: "Vui lòng nhập địa chỉ thường trú"
+            maxlength: "Vui lòng nhập địa chỉ thường trú",
          },
          diachilapdat: {
             required: "Vui lòng nhập địa chỉ lắp đặt",
-            notspecial: "Vui lòng nhập địa chỉ lắp đặt"
+            maxlength: "Vui lòng nhập địa chỉ lắp đặt"
          }
 
       },
